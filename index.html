@@ -7,18 +7,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./app.css">
+    <p> HR managment system </p>
 </head>
 <body>
-    <header><p>HR MANAGEMENT SYSTEM</p>
-       <a href="./accounting.html" >accounting</a>
-       <a href="./index.html" >home page</a>
+    <header>
+        <title id="t1"></title>
+        <nav>
+            <ul>
+       <li><a href="./accounting.html" >accounting</a></li>
+       <li><a href="./index.html" >home page</a></li>
+    </ul>
         </header>
+        <br><br><br>
         <main>
-        
+            
+            <br><br><br>
+            <div id="card"></div>
+                <img src="" alt="" style="width:100%">
+                <div id="container">
+                  
+                </div>
+              
+            <form id="form">
+                <br>
+                
+                <label for="fullname">Full name:</label><br>
+                <input type="text" id="fullname" name="fullname"><br><br>
+                <label for="department">Department:</label><br>
+                
+                <select name="department" id="department" form="form">
+                <option value="administration">Administration</option>
+                <option value="marketing">Marketing</option>
+                <option value="development">Development</option>
+                <option value="finance">Finance</option>
+                </select> <br><br>
+                <label for="level">Level:</label><br>
+                
+                <select name="level" id="level" form="form">
+                <option value="junior">junior</option>
+                <option value="mid-Senior">Mid-Senior</option>
+                <option value="senior">Senior</option>
+                </select><br><br>
+                <label for="Image url">Image url</label><br><br>
+                <input type="select" id="imageurl" name="imageurl"><br><br>
+                <input type="submit" value="Submit"><br>
+              </form>
+              <br><br><br><br><br>
+            
         </main>
         
-        <script src="app.js"></script>
+        <script src="app.js"></script><br><br>
         <footer><a href="#" >facebook</a>
             <a href="#" >twitter</a>
             <p>copyrights</p>
