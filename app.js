@@ -117,4 +117,7 @@ function methodCaller(allEmployees){
     let newObject=new Employee(fullName,Department,Level,imageUrl);
     newObject.render();
   }
+  localStorage.setItem("employeeid","fullName");
+  localStorage.setItem("imageUrl","salary");
+  localStorage.setItem("department","level");
   
