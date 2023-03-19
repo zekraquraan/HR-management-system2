@@ -1,66 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./in.css">
+
     
-<head>
+
+
+  </head>
+  <body>
+
     
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./app.css">
-    <p> HR managment system </p>
-</head>
-<body>
+
     <header>
-        <title id="t1"></title>
-        <nav>
-            <ul>
-       <li><a href="./accounting.html" >accounting</a></li>
-       <li><a href="./index.html" >home page</a></li>
-    </ul>
-        </header>
-        <br><br><br>
-        <main>
-            
-            <br><br><br>
-            <div id="card"></div>
-                <img src="" alt="" style="width:100%">
-                <div id="container">
-                  
-                </div>
-              
-            <form id="form">
-                <br>
-                
-                <label for="fullname">Full name:</label><br>
-                <input type="text" id="fullname" name="fullname"><br><br>
-                <label for="department">Department:</label><br>
-                
-                <select name="department" id="department" form="form">
-                <option value="administration">Administration</option>
-                <option value="marketing">Marketing</option>
-                <option value="development">Development</option>
-                <option value="finance">Finance</option>
-                </select> <br><br>
-                <label for="level">Level:</label><br>
-                
-                <select name="level" id="level" form="form">
-                <option value="junior">junior</option>
-                <option value="mid-Senior">Mid-Senior</option>
-                <option value="senior">Senior</option>
-                </select><br><br>
-                <label for="Image url">Image url</label><br><br>
-                <input type="select" id="imageurl" name="imageurl"><br><br>
-                <input type="submit" value="Submit"><br>
-              </form>
-              <br><br><br><br><br>
-            
-        </main>
+      
+      <nav>
+<div id="links">
+  <a id="hm" href="./index.html">  Home  </a>
+  <a id="ac" href="./accounting.html"> Accounting      </a> </div>
+<hr>
         
-        <script src="app.js"></script><br><br>
-        <footer><a href="#" >facebook</a>
-            <a href="#" >twitter</a>
-            <p>copyrights</p>
-        </footer>
-</body>
+      </nav>
+    </header>
+
+    <main>
+
+      <div id="vline"> 
+      </div>
+
+
+     
+      
+      <form id="Einformatiom">
+        
+        <h3 id="etitle" >   Employee Informatiom</h3>
+<br>
+<br>
+          <lable class="textLable" for="Ename"> Name </lable> 
+          <input type="text" id="Ename" value="" placeholder="Full Name" />
+          
+
+          <lable for="Edepartment"> Department </lable>  
+
+          <select name="Department" id="Edepartment" form="Einformatiom">
+            <option value="Administration">Administration</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Development">Development</option>
+            <option value="Finance">Finance</option>
+          </select>
+          <br>
+        </br>
+
+
+
+
+          <lable for="Elevel"> Level </lable> 
+        
+          <select name="Level" id="Elevel" form="Einformatiom">
+            <option value="Junior">Junior</option>
+            <option value="Mid-Senior">Mid-Senior</option>
+            <option value="Senior">Senior</option>
+            
+          </select> </br>
+
+             <br>
+
+            <fieldset id="EimgF">  
+
+<legend>Personal Image  </legend>
+<lable class="textLable" for="Eimage"> Image URL</lable> 
+<input type="text" id="Eimage" value="" placeholder="eg: www.imagelink.jpg" />
+
+
+            </fieldset>
+        
+<br>
+        <button id="submit" type="submit" value="submit">submit</button>
+          </br>
+
+<br>
+
+      </form>
+    
+
+
+
+
+
+
+
+    </main>
+
+
+    <div id="vline2"> 
+    </div>
+    
+
+
+   
+
+    <script src="./app.js"></script> 
+    <footer>
+      <hr id="footline">
+      
+
+     
+<p> facebook </p>
+      <p id="copyright">&copy; </p>
+    </footer>
+
+
+    
+  </body>
 </html>

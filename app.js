@@ -1,120 +1,203 @@
-'use strict'
+/* employee object  constructor   */
 
-//employee
-const allEmployees=[];
-let form = document.getElementById("form");
-let container = document.getElementById("container");
-function Employee(employeeId,fullName,department,level,imageUrl) {
-  this.employeeId=employeeId;
-  this.fullName=fullName;
-  this.department=department;
-  this.level=level;
-  this.imageUrl=imageUrl;
-  this.salary=0;
-  allEmployees.push(this);
-  
-  console.log(fullName);
-  console.log(department);
-  console.log(level);
-  console.log(imageUrl);
-  
+
+const webEmployee = [];
+
+function Employee(id, name, department, level, image, salary) {
+  this.id = id;
+  this.name = name;
+  this.department = department;
+  this.level = level;
+  this.image = image;
+  this.salary = 0;
+  // this.netSalary=this.salary;
+  webEmployee.push(this);
 }
-Employee.prototype.randomSalary=function () {
-    console.log(this);
-   
-    if(this.level=="Junior"){
-       
-        this.salary=randomNumber(500,1000);
-        
-    }
-    else if(this.level=="Mid-Senior"){
-        this.salary=randomNumber(1000,1500);
-        
-    }
-    else if (this.level=="Senior"){
-        
-        this.salary=randomNumber(1500,2000);
 
-    }
-    netSalary(this.salary);
+let Ghazi = new Employee(
+  1000,
+  "Ghazi Samer",
+  "Administration",
+  "Senior",
+  "./assets/Ghazi.jpg"
+);
+
+let Lana = new Employee(
+  1001,
+  "Lana Ali",
+  "Finance",
+  "Senior",
+  "./assets/Lana.jpg"
+);
+
+let Tamara = new Employee(
+  1002,
+  "Tamara Ayoub",
+  "Marketing",
+  "Senior",
+  "./assets/Tamara.jpg"
+);
+
+let Safi = new Employee(
+  1003,
+  "Safi Walid",
+  "Administration",
+  "Mid-Senior",
+  "./assets/Safi.jpg"
+);
+
+let Omar = new Employee(
+  1004,
+  "Omar Zaid	",
+  "Development",
+  "Senior",
+  "./assets/Omar.jpg"
+);
+
+let Rana = new Employee(
+  1005,
+  "Rana Saleh",
+  "Developmen",
+  "Junior",
+  "./assets/Rana.jpg"
+);
+
+let Hadi = new Employee(
+  1006,
+  "Hadi Ahmad",
+  "Finance",
+  "Mid-Senior",
+  "./assets/Hadi.jpg"
+);
+
+Employee.prototype.netSalary = function () {
+  if (this.level == "Senior") {
+    let net = Math.floor(Math.random() * (2000 - 1500)) + 1500;
+    this.salary = net * (1 - 0.075);
+  } else if (this.level == "Mid-Senior") {
+    let net = Math.floor(Math.random() * (1500 - 1000)) + 1000;
+    this.salary = net * (1 - 0.075);
+  } else if (this.level == "Junior") {
+    let net = Math.floor(Math.random() * (1000 - 500)) + 500;
+    this.salary = net * (1 - 0.075);
   }
 
-  let employee1 =new Employee(1000,"Ghazi Samer","Administration","Senior","./assets/ghazi.jpg");
-  let employee2=new Employee(1001,"Lana Ali","Finance","Senior","./assets/lana.jpg");
-  let employee3=new Employee(1002,"Tamara Ayoub","Marketing","Senior","./assets/tamara.jpg");
-  let employee4=new Employee(1003,"Safi Walid","Administration","Mid-Senior","./assets/safi.jpg");
-  let employee5=new Employee(1004,"Omar Zaid","Development","Senior","./assets/omar.jpg");
-  let employee6=new Employee(1005,"Rana Saleh","Development","Junior","./assets/rana.jpg");
-  let employee7=new Employee(1006,"Hadi Ahmad","Finance","Mid-Senior","./assets/hadi.jpg");
+  return this.salary;
+};
+
+function employeeId() {
+  for (let i = 0; i < webEmployee.length; i++) {
+    let randomId = Math.floor(Math.random() * 9000 + 1000);
+    this.id = randomId;
+    return this.id;
+  }
+}
+
+///////////////////////////////////////////////////////
 
 
+
+let container = document.createElement("div");
+document.body.appendChild(container);
+
+let h1El = document.createElement("h1");
+h1El.textContent = "Employee Cards";
+container.appendChild(h1El);
+h1El.style.paddingTop = "20px";
+h1El.style.color = "rgba(24, 32, 65, 0.5)";
+
+
+container.style.width = "800px";
+container.style.marginLeft = "70px";
+container.style.marginTop = "-40px";
+container.style.marginBottom = "100PX";
+container.style.textAlign = "center";
+container.style.display = "inline-block";
+container.style.borderRadius = "20px";
+container.style.backgroundColor="rgba(50,10,50,0.5";
+//Card function
+Employee.prototype.render = function () {
+  let card = document.createElement("div");
+
+  card.style.backgroundColor = "rgba(65, 11, 46, 0.19)";
+  card.style.display = "inline-block";
+  card.style.width = "200px";
+
+  card.style.borderColor = "black";
+  card.style.margin = "30px";
+  card.style.padding = "10px";
+  card.style.display = "inline-block";
+  card.style.borderRadius = "5px";
+  card.style.fontFamily = "";
+
+  let cardimg = document.createElement("img");
+  let cardname = document.createElement("p");
+  let cardid = document.createElement("p");
+  let cardepartment = document.createElement("p");
+  let cardlevel = document.createElement("p");
+  let cardsalary = document.createElement("p");
+
+  cardimg.src = this.image;
+  cardname.textContent = "Name: " + this.name;
+  cardid.textContent = "Id:" + employeeId();
+  cardepartment.textContent = "Department: " + this.department;
+  cardlevel.textContent = "Level: " + this.level;
+  cardsalary.textContent = "Salary: " + this.netSalary();
+
+  card.appendChild(cardimg);
+
+  card.appendChild(cardname);
+  card.appendChild(cardid);
+  card.appendChild(cardepartment);
+
+  card.appendChild(cardlevel);
+
+  card.appendChild(cardsalary);
+
+  container.appendChild(card);
+};
+
+
+
+
+let form = document.getElementById("Einformatiom");
+// let submit = document.getElementById("submit");
+
+
+form.addEventListener("submit", clickGet);
+
+function clickGet(event) {
+  event.preventDefault();
+console.log("jjj")
+  let nameFull = (event.target.Ename.value);
+
+  let departmentS = (event.target.Edepartment.value);
+
+  let levelS = (event.target.Elevel.value);
+
+  let imageE = (event.target.Eimage.value);
+
+console.log(employeeId(),nameFull ,departmentS, levelS ,imageE);
+
+ let formData = new Employee( employeeId(),nameFull ,departmentS, levelS ,imageE   );
+
+  
+formData.render();
  
-  Employee.prototype.render=function(){
-    const div = document.getElementById("card");
-    const img  =document.createElement("img");
-   const fname =document.createElement("p");
-   const department1=document.createElement("p");
-   const level1=document.createElement("p");
-   const salary1=document.createElement("p");
-   const idn=document.createElement("p");
-   
-console.log(this.imageUrl);
-   img.src=this.imageUrl;
-   fname.textContent=this.fullName;
-   department1.textContent=this.department;
-   level1.textContent=this.level;
-   salary1.textContent=this.salary;
-   idn.textContent=this.employeeId;
-   
-
-
-   div.appendChild(img);
-   div.appendChild(fname);
-   div.appendChild(department1);
-   div.appendChild(level1);
-   div.appendChild(salary1);
-   div.appendChild(idn);
-
-   container.appendChild(div);
-  }
-
-
-
-// Employee.prototype.id=function(){
-//   this.employeeId=id();
-//   console.log(id());
-  
-// }
-Employee.prototype.uniqueId=function(){
-  return (Math.floor(Math.random() * 10000));
 }
 
-console.log(allEmployees);
-methodCaller(allEmployees);
-function randomNumber(min,max) {
-  return Math.floor(Math.random()*(max-min))+min;
-}
-function netSalary(salary){
- console.log(salary);
-}
-function methodCaller(allEmployees){
-  for(let i=0;i<allEmployees.length;i++){
-    allEmployees[i].randomSalary();
-    allEmployees[i].render();
-    allEmployees[i].uniqueId();
-    //allEmployees[i].netSalary();
-   
-  }}
-  form.addEventListener("submit",eventHandler);
-  function eventHandler(event){
-    event.preventDefault();
-    console.log(event.target);
-    let fullName=(event.target.fullname.value);
-    let Department=(event.target.department.value);
-    let Level=(event.target.level.value);
-    let imageUrl=(event.target.imageurl.value);
-    console.log(fullName,Department,Level,imageUrl)
-    let newObject=new Employee(fullName,Department,Level,imageUrl);
-    newObject.render();
-  }
-  
+
+
+
+
+
+Ghazi.render();
+Safi.render();
+
+Omar.render();
+Rana.render();
+
+Hadi.render();
+Lana.render();
+
+Tamara.render();
