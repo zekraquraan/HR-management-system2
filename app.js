@@ -100,12 +100,13 @@ function employeeId() {
 let container = document.createElement("div");
 document.body.appendChild(container);
 
+
 let h1El = document.createElement("h1");
 h1El.textContent = "Employee Cards";
+
 container.appendChild(h1El);
 h1El.style.paddingTop = "20px";
 h1El.style.color = "rgba(24, 32, 65, 0.5)";
-
 
 container.style.width = "800px";
 container.style.marginLeft = "70px";
