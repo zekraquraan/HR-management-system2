@@ -1,0 +1,139 @@
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(166, 85, 162);
+}
+header nav{
+   width:35%;
+   
+
+}
+nav ul {
+    display: flex;
+   
+    justify-content: space-between;
+   
+}
+nav ul li{
+    display: flex;
+    width:0%;
+    text-decoration: none;
+    margin-left: 100%;
+    justify-content: space-between; 
+   
+}
+
+img{
+    border-radius: 20px;
+    width: 20%;
+    
+}
+
+
+main {
+    
+    display:flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    flex-direction: column;
+
+}
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+#form{
+    background-color: #ebe1e2;
+    border:2px solid black;
+    border-radius: 20px;
+    border-color:black;
+    width:25%;
+}
+
+
+#sec1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+
+    
+}
+
+#sec1 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(184, 163, 203);
+    padding:25px;
+    border-radius: 10px;
+    width: 35%;
+    min-height: 300px;
+}
+#sec2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form label ,input{
+     display: flex;
+     justify-content: center;
+}
+#form select{
+    width:80%;
+    height: 30px;
+    margin-left: 9%;
+}
+#form input{
+    width:77%;
+    height: 25px;
+    margin-left: 9%;
+}
+
+
+  h4{
+     display:flex;
+    justify-content:center;  
+    font-weight: 700px;
+    font-style: italic;
+    color: rgb(180, 122, 180);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+footer{
+    display:flex;
+    justify-content: center;
+    background-color: rgb(87, 105, 197);
+    height: 20px;
+    margin-top: 20px;
+}
+i{
+    color:rgb(205, 155, 197);
+}
+#sec3{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+}
+  
+table{
+    border: 2px solid rgb(89, 75, 140);
+}
+    th{
+        border: 2px solid rgb(149, 125, 159);
+        padding: 20px;
+        background-color: rgb(207, 202, 193);
+    }
+
+td {
+    border: 2px solid rgb(128, 93, 128);
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(140, 113, 146);
+}

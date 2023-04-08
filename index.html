@@ -1,66 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./app.css">
-    <p> HR managment system </p>
+    <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/8e4f71bf60.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script src="https://kit.fontawesome.com/8e4f71bf60.js" crossorigin="anonymous"></script> -->
+    <title>Document</title>
 </head>
+
 <body>
     <header>
-        <title id="t1"></title>
         <nav>
             <ul>
-       <li><a href="./accounting.html" >accounting</a></li>
-       <li><a href="./app.js" >home page</a></li>
-    </ul>
-        </header>
-        <br><br><br>
-        <main>
-            
-            <br><br><br>
-            <div id="card"></div>
-                <img src="" alt="" style="width:100%">
-                <div id="container">
-                  
-                </div>
-              
-            <form id="form">
-                <br>
-                
-                <label for="fullname">Full name:</label><br>
-                <input type="text" id="fullname" name="fullname"><br><br>
-                <label for="department">Department:</label><br>
-                
-                <select name="department" id="department" form="form">
-                <option value="administration">Administration</option>
-                <option value="marketing">Marketing</option>
-                <option value="development">Development</option>
-                <option value="finance">Finance</option>
-                </select> <br><br>
-                <label for="level">Level:</label><br>
-                
-                <select name="level" id="level" form="form">
-                <option value="junior">junior</option>
-                <option value="mid-Senior">Mid-Senior</option>
-                <option value="senior">Senior</option>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="accounting.html">Accounting</a></li>
+
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <section id="sec2">
+            <br>
+            <form id="form"><br>
+                <label for="fname">Full Name</label>
+                <input id="fname"><br>
+                <label for="department">Department</label>
+                <select id="department" name="choice">
+                    <option value="Administration" type="choice" >Administration</option>
+                    <option value="Marketing" id="sec2">Marketing</option>
+                    <option value="Development" id="sec3">Development</option>
+                    <option value="Finance" id="sec4">Finance</option>
                 </select><br><br>
-                <label for="Image url">Image url</label><br><br>
-                <input type="select" id="imageurl" name="imageurl"><br><br>
-                <input type="submit" value="Submit"><br>
-              </form>
-              <br><br><br><br><br>
+                <label for="level">Level</label>
+                <select id="level" name="choose">
+                    <option value="Junior" type="choice">Junior</option>
+                    <option value="Mid-Senior">Mid-Senior</option>
+                    <option value="Senior">Senior</option>
+                </select><br><br>
+                <label for="image">Image URL: </label>
+                <input type="text" id="image"><br>
+                <input type="submit" value="submit"><br>
+            </form>
+           <br>
             
-        </main>
+        </section>
+        <div class="secParent">
+            <section id="sec1">
+            </section>
+        </div>
         
-        <script src="app.js"></script><br><br>
-        <footer><a href="#" >facebook</a>
-            <a href="#" >twitter</a>
-            <p>copyrights</p>
-        </footer>
+       
+       
+
+        <script src="./app.js"></script>
+
+
+    </main>
+    <footer>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+        <i class="fa-solid fa-copyright">  copyright </i>
+    </footer>
+
 </body>
+
 </html>
