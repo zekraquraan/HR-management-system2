@@ -67,7 +67,10 @@ function tableRow(obj) {
 
 
 
-
+// let admRow = document.getElementById('adm') ;
+// let numberCell = document.createElement('td');
+// numberCell.textContent = findNumberOfEmployee(employeesData).adminstration;
+// admRow.appendChild(numberCell);
 
 
 function addCellToRow(rowId,arr,department) {
@@ -199,3 +202,6 @@ function addRow() {
 }
 addRow()
 
+// addCell4ToRow('total',employeesData,'adminstration');
+// addCell4ToRow('total',employeesData,'marketing');
+// addCell4ToRow('total',employeesData,'finance');

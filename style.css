@@ -1,7 +1,37 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@zekraquraan 
+WalaaAlrefai
+/
+HR-management-system
+Public
+Fork your own copy of WalaaAlrefai/HR-management-system
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+HR-management-system/css/style.css
+@WalaaAlrefai
+WalaaAlrefai almost finished
+Latest commit 5814aee last month
+ History
+ 1 contributor
+139 lines (117 sloc)  2.15 KB
+ 
+
 header{
     display: flex;
     flex-direction: row;
-    background-color: rgb(166, 85, 162);
+    background-color: rgb(65, 114, 98);
 }
 header nav{
    width:35%;
@@ -101,18 +131,18 @@ a{
     justify-content:center;  
     font-weight: 700px;
     font-style: italic;
-    color: rgb(180, 122, 180);
+    color: rgb(32, 73, 108);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 footer{
     display:flex;
     justify-content: center;
-    background-color: rgb(87, 105, 197);
+    background-color: rgb(65, 114, 98);
     height: 20px;
     margin-top: 20px;
 }
 i{
-    color:rgb(205, 155, 197);
+    color:antiquewhite;
 }
 #sec3{
     display: flex;
@@ -123,17 +153,32 @@ i{
 }
   
 table{
-    border: 2px solid rgb(89, 75, 140);
+    border: 2px solid green;
 }
     th{
-        border: 2px solid rgb(149, 125, 159);
+        border: 2px solid green;
         padding: 20px;
-        background-color: rgb(207, 202, 193);
+        background-color: rgb(246, 179, 45);
     }
 
 td {
-    border: 2px solid rgb(128, 93, 128);
+    border: 2px solid green;
     text-align: center;
     padding: 10px;
-    background-color: rgb(140, 113, 146);
+    background-color: rgb(115, 142, 58);
 }
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+HR-management-system/style.css at localStorage · WalaaAlrefai/HR-management-system
